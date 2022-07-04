@@ -3,14 +3,13 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
-  LoginPage({Key? key}) : super(key: key);
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
-  @override
   bool _passwordVisible = false;
 
   @override
@@ -18,6 +17,7 @@ class _LoginPageState extends State<LoginPage> {
     _passwordVisible = false;
   }
 
+  @override
   Widget build(BuildContext context) {
     var _width = MediaQuery.of(context).size.width;
     var _height = MediaQuery.of(context).size.height;
