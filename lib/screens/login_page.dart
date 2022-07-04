@@ -13,11 +13,6 @@ class _LoginPageState extends State<LoginPage> {
   bool _passwordVisible = false;
 
   @override
-  void initState() {
-    _passwordVisible = false;
-  }
-
-  @override
   Widget build(BuildContext context) {
     var _width = MediaQuery.of(context).size.width;
     var _height = MediaQuery.of(context).size.height;
@@ -70,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
               width: _width,
               height: _height,
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 255, 255, 255).withOpacity(0.4),
+                color: const Color.fromARGB(255, 255, 255, 255).withOpacity(0.4),
               ),
             ),
           ),
@@ -285,7 +280,7 @@ class _LoginPageState extends State<LoginPage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           "Not a member?",
                           style: TextStyle(fontSize: 12),
                         ),
