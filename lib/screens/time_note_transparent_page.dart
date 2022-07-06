@@ -38,6 +38,10 @@ class _TimeNoteTransparentPageState extends State<TimeNoteTransparentPage> {
           ),
           child: ClipRRect(
             child: BottomNavigationBar(
+              selectedFontSize: 10,
+              unselectedFontSize: 10,
+              selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w700),
+              unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w700),
               type: BottomNavigationBarType.fixed,
               currentIndex: _currentIndex,
               onTap: (index) {
@@ -45,24 +49,22 @@ class _TimeNoteTransparentPageState extends State<TimeNoteTransparentPage> {
                   _currentIndex = index;
                 });
               },
-              showSelectedLabels: false,
-              showUnselectedLabels: false,
               items: const [
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.home_rounded),
-                  label: "home",
+                  icon: Icon(Icons.snippet_folder),
+                  label: "Documents",
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.account_balance_wallet_rounded),
-                  label: "Wallet",
+                  icon: Icon(Icons.pie_chart_rounded),
+                  label: "Summary",
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.analytics_rounded),
-                  label: "Statistic",
+                  icon: Icon(Icons.calendar_month_rounded),
+                  label: "Calendar",
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.settings_rounded),
-                  label: "Settings",
+                  icon: Icon(Icons.mail_rounded),
+                  label: "Messages",
                 ),
               ],
             ),
@@ -142,7 +144,7 @@ class _TimeNoteTransparentPageState extends State<TimeNoteTransparentPage> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   SizedBox(
                     width: _width * 0.9,
                     child: _createDocument(0, "Design", "TimeNote 3.0 - Landing Page", "The practice of the Flutter"),
@@ -266,7 +268,7 @@ Widget _createDocument(int colorIndexNum, String category, String title, String 
           const SizedBox(height: 28),
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.w700,
               fontSize: 15,
             ),
@@ -274,7 +276,7 @@ Widget _createDocument(int colorIndexNum, String category, String title, String 
           const SizedBox(height: 5),
           Text(
             description,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.w500,
               fontSize: 12,
               color: Colors.grey,
